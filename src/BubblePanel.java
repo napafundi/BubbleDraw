@@ -41,7 +41,7 @@ public class BubblePanel extends JPanel{
             repaint();
         }
         public void mouseWheelMoved(MouseWheelEvent e) {
-            size += e.getUnitsToScroll();
+            size = Math.max(size + e.getUnitsToScroll(), 3);
         }
     }
     private class Bubble {
